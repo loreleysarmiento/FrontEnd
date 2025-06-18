@@ -1,0 +1,10 @@
+<a class="list-card" [routerLink]="['/lists', listEntity.id]">
+  <div class="list-header">
+    <h2>{{ listEntity.name }}</h2>
+    <p class="description" *ngIf="listEntity.description">{{ listEntity.description }}</p>
+  </div>
+  <div class="list-footer">
+    <span>{{ contentCount }} contenido(s)</span>
+    <span class="view-text">Ver detalles →</span>
+  </div>
+</a>

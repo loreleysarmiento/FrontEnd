@@ -1,0 +1,71 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAJE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="profile-container">
+  <!-- Título Principal -->
+  <h1 class="title">MI PERFIL</h1>
+
+  <!-- Contenedor Principal -->
+  <div class="main-layout">
+
+
+    <!-- Perfil del Usuario -->
+    <div class="left-section">
+      <mat-card class="profile-card">
+        <div class="profile-info">
+          <img [src]="userData?.images || 'assets/profile.png'" alt="Profile Image" class="profile-image">
+          <div class="profile-details">
+            <h2>{{ userData?.firstName }} {{ userData?.lastName }}</h2>
+            <p>{{ userData?.email }}</p>
+            <p>{{ userData?.userName }}</p>
+            <ul class="list-buttons">
+              <li>
+                <button mat-raised-button color="warn" class="platform-button" routerLink="/platforms">Plataformas suscritas</button>
+              </li>
+              <li>
+                <button mat-raised-button color="warn" class="edit-button" routerLink="/editmode">Editar Perfil</button>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </mat-card>
+
+      <!-- Contenido Visto -->
+      <mat-card class="content-section">
+        <h3>CONTENIDO VISTO</h3>
+        <div class="content-list">
+          <div *ngFor="let item of userData?.list" class="content-item">
+            <img [src]="item.image || 'assets/content-placeholder.png'" alt="Content Image" />
+            <button mat-raised-button class="review-button">Reseñar</button>
+          </div>
+        </div>
+        <button mat-raised-button color="warn" class="my-list-button" routerLink="/lists">
+          Mis listas
+        </button>
+      </mat-card>
+    </div>
+
+    <div class="user-profile">
+      <h2>Mis Reseñas</h2>
+      <div class="reviews-container">
+        <app-user-review-card
+          *ngFor="let review of userReviews"
+          [review]="review">
+        </app-user-review-card>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+</body>
+</html>

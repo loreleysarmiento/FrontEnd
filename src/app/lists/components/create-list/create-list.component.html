@@ -1,0 +1,35 @@
+<div class="create-list-container">
+  <h2>Crear nueva lista</h2>
+
+  <form (ngSubmit)="createList()" #listForm="ngForm">
+    <div class="form-group">
+      <label for="name">Nombre *</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        [(ngModel)]="listEntity.name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descripción</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="listEntity.description"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <!-- ✅ Botón con clase estilizada -->
+    <button
+      type="submit"
+      class="create-list-btn"
+      [disabled]="!listForm.form.valid"
+    >
+      + Crear lista
+    </button>
+  </form>
+</div>

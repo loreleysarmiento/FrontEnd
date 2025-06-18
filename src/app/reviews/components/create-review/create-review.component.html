@@ -1,0 +1,31 @@
+<div class="review-container">
+  <label class="review-title">Rajar:</label>
+
+  <div class="star-icon-row">
+    <button
+      *ngFor="let star of stars; let i = index"
+      (click)="selectStar(i + 1)"
+      class="star-button"
+      [class.active]="i < selectedRating"
+    >
+      <img
+        [src]="i < selectedRating ? 'assets/star.png' : 'assets/starnorellena.png'"
+        alt="Estrella"
+        class="star-icon"
+      />
+    </button>
+
+    <!-- Ícono Corazón -->
+    <button class="icon-button" (click)="onHeartClick()">
+      <img [src]="isFavorite ? 'assets/heartfilled.png' : 'assets/Heart.png'" alt="Corazón" />
+    </button>
+
+    <!-- Ícono Ojo -->
+    <button class="icon-button" (click)="onEyeClick()">
+      <img [src]="isViewed ? 'assets/Eyeoff.png' : 'assets/eye.png'" alt="Ojo" />
+    </button>
+  </div>
+
+  <textarea placeholder="Escribe un comentario..." [(ngModel)]="reviewText"></textarea>
+  <button class="submit-button" (click)="submitReview()" [disabled]="loading">Rajar</button>
+</div>

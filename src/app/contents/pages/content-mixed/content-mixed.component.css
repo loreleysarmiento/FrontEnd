@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400&display=swap');
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  margin: 100px;
+  font-family: 'Lexend Mega', sans-serif;
+}
+
+.mixed-grid {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1400px;
+}
+
+.content-item {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  background-color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+}
+
+.main-section {
+  flex-grow: 2;
+  min-width: 0;
+}
+.right-section{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.reviews-section  {
+  width: 350px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  height: fit-content;
+}
+.create-review {
+  width: 350px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  height: fit-content;
+}
+.reviews-section h3 {
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #111;
+}

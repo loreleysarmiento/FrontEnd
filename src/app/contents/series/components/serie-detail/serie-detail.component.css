@@ -1,0 +1,88 @@
+.serie-detail {
+  display: flex;
+  gap: 30px;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.poster-container {
+  flex-shrink: 0;
+  width: 450px;
+}
+
+.serie-poster {
+  width: 450px;
+  height: 675px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  object-fit: cover;
+}
+
+.info-container {
+  flex-grow: 1;
+}
+
+.serie-info {
+  font-size: 15px;
+  color: #bbb;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.serie-info span {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.platforms {
+  margin-bottom: 25px;
+}
+
+.platforms h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.platform-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.credits {
+  margin-bottom: 15px;
+}
+
+.credits h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.credits-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.actor-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 5px;
+  border: 2px solid #555;
+}
+
+.actor-card p {
+  font-size: 12px;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}

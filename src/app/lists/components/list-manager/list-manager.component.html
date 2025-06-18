@@ -1,0 +1,13 @@
+<div class="list-manager-container">
+  <div class="header">
+    <h1>Mis listas</h1>
+    <button class="create-btn" (click)="goToCreateList()">+ Crear nueva lista</button>
+  </div>
+
+  <div class="lists-grid">
+    <app-list-card
+      *ngFor="let list of userLists"
+      [listEntity]="list">
+    </app-list-card>
+  </div>
+</div>

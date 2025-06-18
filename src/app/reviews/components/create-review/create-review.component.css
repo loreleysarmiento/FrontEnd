@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400&display=swap');
+.review-container {
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Lexend Mega', sans-serif;
+}
+
+.review-title {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.star-icon-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.star-button,
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+}
+
+textarea {
+  width: 80%;
+  height: 80px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #d3d3d3;
+  border: none;
+  resize: none;
+  font-family: inherit;
+}
+
+.submit-button {
+  font-family: 'Lexend Mega', sans-serif;
+  background-color: #8b0000;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+  font-size: 20px;
+}
+
+.star-button.active .star-icon {
+  filter: drop-shadow(0 0 5px gold);
+  transform: scale(1.1);
+}

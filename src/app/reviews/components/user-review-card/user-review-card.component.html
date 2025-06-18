@@ -1,0 +1,22 @@
+<div class="user-review-card">
+  <img [src]="contenidoImagen" alt="{{contenidoTitulo}}" class="content-image" />
+  <div class="review-details">
+    <h3 class="content-title">{{ contenidoTitulo }}</h3>
+    <div class="star-rating">
+      <ng-container *ngFor="let star of [].constructor(5); let i = index">
+        <img
+          [src]="i < review.rating ? 'assets/star.png' : 'assets/starnorellena.png'"
+          alt="Star"
+          class="star-icon"
+        />
+      </ng-container>
+    </div>
+    <p class="review-text">"{{ review.text }}"</p>
+  </div>
+  <div class="review-actions">
+    <button mat-raised-button color="warn" class="modify-button" (click)="modifyReview()">Modificar</button>
+    <button class="delete-button" (click)="deleteReview()">
+      <img src="assets/tachito.png" alt="Delete" class="delete-icon" />
+    </button>
+  </div>
+</div>

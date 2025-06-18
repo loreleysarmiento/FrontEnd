@@ -1,0 +1,58 @@
+import { Routes } from '@angular/router';
+import { LoginComponent } from './users/pages/login-form/components/login/login.component';
+import { UserProfileComponent } from './users/components/user-profile/user-profile.component';
+import { RegisterComponent } from './users/pages/register/register/register.component';
+import { TendenciasComponent } from './public/components/Tendencias/tendencias/tendencias.component';
+import { ParatiComponent } from './public/pages/parati/parati.component';
+import { FavoritosComponent } from './public/components/Favoritos/favoritos/favoritos.component';
+import {MovieDetailComponent} from './contents/movies/components/movie-detail/movie-detail.component';
+import {ActorProfileComponent} from './persons/actors/components/actor-profile/actor-profile.component';
+import {DirectorProfileComponent} from './persons/directors/components/director-profile/director-profile.component';
+import {AuthorProfileComponent} from './persons/authors/components/author-profile/author-profile.component';
+import {PlatformListComponent} from './contents/platforms/components/platform-list/platform-list.component';
+import {EditProfileComponent}  from './users/components/edit-profile/edit-profile.component';
+import {ContentDetailComponent} from './contents/pages/content-detail/content-detail.component';
+import {ListsPageComponent} from './lists/pages/lists.page/lists.page.component';
+import {ListDetailComponent} from './lists/components/list-detail/list-detail.component';
+
+
+export const routes: Routes = [
+  // 🔐 Auth
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+
+  // 👤 Usuario
+  { path: 'profile', component: UserProfileComponent },
+  {path: 'editmode', component: EditProfileComponent},
+
+  // 📚 Contenidos
+  { path: 'tendencies', component: TendenciasComponent },
+  { path: 'foryou', component: ParatiComponent },
+  { path: 'favorites', component: TendenciasComponent },
+  { path: 'content/:type/:id', component: ContentDetailComponent },
+
+
+  // 🎬 Detalle de contenido
+  { path: 'movies/:id', component: MovieDetailComponent },
+
+  // 👥 Perfiles de personas
+  { path: 'actor/:id', component: ActorProfileComponent },
+  { path: 'director/:id', component: DirectorProfileComponent },
+  { path: 'author/:id', component: AuthorProfileComponent },
+
+  // 💻 Plataformas
+  { path: 'platforms', component: PlatformListComponent },
+
+  // 📂 Rutas de listas personalizadas
+  { path: 'lists', component: ListsPageComponent },
+  {path: 'lists/:id', component: ListDetailComponent},
+
+
+  // ⚠️ Fallback
+  { path: '**', redirectTo: 'login' }
+
+
+
+
+];

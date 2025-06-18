@@ -1,0 +1,49 @@
+<script src="../../../../contents/movies/components/movie-card/movie-card.component.ts"></script>
+<div class="actor-profile-wrapper">
+  <div class="actor-profile-container">
+    <!-- Columna izquierda -->
+    <div class="actor-left">
+      <img [src]="actor?.imagen" alt="Imagen de {{actor?.nombre}}" class="actor-image" />
+      <button class="back-btn" routerLink="/foryou">Volver a Para Ti</button>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="actor-info">
+      <h1>{{ actor?.nombre }}</h1>
+      <h2>Edad: {{ actor?.edad }}</h2>
+      <p>{{ actor?.descripcion }}</p>
+
+      <!-- Filmografía -->
+      <div class="credits-inline" *ngIf="hasFilmografia">
+        <h3>Filmografía</h3>
+        <div class="credits-row">
+          <!-- Películas -->
+          <a
+            *ngFor="let movie of peliculas"
+            [routerLink]="['/content', 'movie', movie.id]"
+            style="text-decoration: none;"
+          >
+            <app-movie-card
+              [titulo]="movie.titulo"
+              [imagen]="movie.imagen"
+              [movie]="movie"
+            ></app-movie-card>
+          </a>
+
+          <!-- Series -->
+          <a
+            *ngFor="let serie of series"
+            [routerLink]="['/content', 'serie', serie.id]"
+            style="text-decoration: none;"
+          >
+            <app-serie-card
+              [titulo]="serie.titulo"
+              [imagen]="serie.imagen"
+              [serie] ="serie"
+            ></app-serie-card>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

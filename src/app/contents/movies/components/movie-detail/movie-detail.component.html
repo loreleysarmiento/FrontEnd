@@ -1,0 +1,33 @@
+<div class="movie-detail" *ngIf="movie">
+  <div class="poster-container">
+    <img [src]="movie.imagen" alt="{{movie.titulo}}" class="movie-poster" />
+  </div>
+
+  <div class="info-container">
+    <h2>{{movie.titulo}}</h2>
+    <p>{{movie.sinopsis}}</p>
+
+    <div class="movie-info">
+      <span><strong>Duración:</strong> {{movie.duracion}} minutos</span>
+      <span><strong>Fecha de Lanzamiento:</strong> {{movie.fecha_lanzamiento}}</span>
+      <span><strong>Idioma Original:</strong> {{movie.idioma_original}}</span>
+      <span><strong>País de Origen:</strong> {{movie.pais_origen}}</span>
+      <span><strong>Género:</strong> {{movie.genero.join(', ')}}</span>
+    </div>
+
+    <div class="platforms">
+      <h3>Disponible en:</h3>
+      <div class="platform-icons">
+        <app-platform-card *ngFor="let plataforma of plataformas" [imagen]="plataforma.imagen"></app-platform-card>
+      </div>
+    </div>
+
+    <div class="credits">
+      <h3>Reparto</h3>
+      <div class="credits-container">
+        <app-director-card *ngIf="director" [id]="director.id" [nombre]="director.nombre" [imagen]="director.imagen"></app-director-card>
+        <app-actor-card *ngFor="let actor of actores" [id]="actor.id" [nombre]="actor.nombre" [imagen]="actor.imagen"></app-actor-card>
+      </div>
+    </div>
+  </div>
+</div>

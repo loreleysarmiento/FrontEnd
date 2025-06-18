@@ -1,0 +1,51 @@
+<div class="register-container">
+  <!-- Botón de Retroceso -->
+  <button class="back-button" (click)="goBack()">
+    <img src="assets/ArrowBack.png" alt="Back">
+  </button>
+
+  <!-- Formulario y Logo -->
+  <div class="form-logo-container">
+    <!-- Formulario de Registro -->
+    <mat-card class="register-card">
+      <form (ngSubmit)="register()" class="register-form">
+        <mat-form-field appearance="fill" class="register-input">
+          <mat-label>Nombre</mat-label>
+          <input matInput [(ngModel)]="name" name="name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="register-input">
+          <mat-label>Usuario</mat-label>
+          <input matInput [(ngModel)]="username" name="username" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="register-input">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput [(ngModel)]="email" name="email" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="register-input">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [(ngModel)]="password" name="password" type="password" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="register-input">
+          <mat-label>Confirmar contraseña</mat-label>
+          <input matInput [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required>
+        </mat-form-field>
+
+        <div class="social-buttons">
+          <img src="assets/facebookicon.png" alt="Facebook" class="social-icon">
+          <img src="assets/gmailicon.png" alt="Google" class="social-icon">
+        </div>
+
+        <button mat-raised-button color="warn" class="register-button">Registrarse</button>
+      </form>
+    </mat-card>
+
+    <!-- Logo RAJE -->
+    <div class="logo-container">
+      <img src="assets/RajeLogo.png" alt="RAJE Logo" class="logo">
+    </div>
+  </div>
+</div>

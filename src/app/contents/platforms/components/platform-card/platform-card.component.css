@@ -1,0 +1,13 @@
+.platform-card {
+  width: 100px;
+  margin: 5px;
+}
+
+.platform-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.platform-card img:hover {
+  transform: scale(1.05);
+}

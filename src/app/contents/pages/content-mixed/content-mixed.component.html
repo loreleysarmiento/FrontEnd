@@ -1,0 +1,42 @@
+<div class="content-container">
+  <div class="mixed-grid">
+    <ng-container *ngFor="let item of mixedContent">
+      <div class="content-item">
+        <!-- Sección Principal del Contenido -->
+        <div class="main-section">
+          <ng-container *ngIf="isMovie(item)">
+            <app-movie-detail [movie]="item"></app-movie-detail>
+            <app-add-to-list [contentId]="item.id"></app-add-to-list>
+          </ng-container>
+          <ng-container *ngIf="isBook(item)">
+            <app-book-detail [book]="item"></app-book-detail>
+            <app-add-to-list [contentId]="item.id"></app-add-to-list>
+          </ng-container>
+          <ng-container *ngIf="isSerie(item)">
+            <app-serie-detail [serie]="item"></app-serie-detail>
+            <app-add-to-list [contentId]="item.id"></app-add-to-list>
+          </ng-container>
+        </div>
+        <div class="right-section">
+          <!-- Sección de Reseñas -->
+          <div class="reviews-section" *ngIf="getReviewsForContent(item.id).length > 0">
+            <h3>Rajes</h3>
+            <app-other-user-review-card
+              *ngFor="let review of getReviewsForContent(item.id)"
+              [review]="review">
+            </app-other-user-review-card>
+          </div>
+          <div class="create-review">
+            <app-create-review
+              [contenidoId]="item.id"
+              (reviewCreated)="loadReviews()"
+            ></app-create-review>
+
+          </div>
+
+        </div>
+
+      </div>
+    </ng-container>
+  </div>
+</div>

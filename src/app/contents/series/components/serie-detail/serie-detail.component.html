@@ -1,0 +1,34 @@
+<div class="serie-detail" *ngIf="serie">
+  <div class="poster-container">
+    <img [src]="serie.imagen" alt="{{serie.titulo}}" class="serie-poster" />
+  </div>
+
+  <div class="info-container">
+    <h2>{{serie.titulo}}</h2>
+    <p>{{serie.sinopsis}}</p>
+
+    <div class="serie-info">
+      <span><strong>Temporadas:</strong> {{serie.num_temporadas}}</span>
+      <span><strong>Episodios:</strong> {{serie.num_episodios}}</span>
+      <span><strong>Fecha de Lanzamiento:</strong> {{serie.fecha_lanzamiento}}</span>
+      <span><strong>Idioma Original:</strong> {{serie.idioma_original}}</span>
+      <span><strong>País de Origen:</strong> {{serie.pais_origen}}</span>
+      <span><strong>Género:</strong> {{serie.genero.join(', ')}}</span>
+    </div>
+
+    <div class="platforms">
+      <h3>Disponible en:</h3>
+      <div class="platform-icons">
+        <app-platform-card *ngFor="let plataforma of plataformas" [imagen]="plataforma.imagen"></app-platform-card>
+      </div>
+    </div>
+
+    <div class="credits">
+      <h3>Reparto</h3>
+      <div class="credits-container">
+        <app-director-card *ngIf="director" [id]="director.id" [nombre]="director.nombre" [imagen]="director.imagen"></app-director-card>
+        <app-actor-card *ngFor="let actor of actores" [id]="actor.id" [nombre]="actor.nombre" [imagen]="actor.imagen"></app-actor-card>
+      </div>
+    </div>
+  </div>
+</div>

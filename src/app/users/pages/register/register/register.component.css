@@ -1,0 +1,124 @@
+/* Fondo de Página */
+body {
+  background: linear-gradient(180deg, #111111 0%, #361717 100%);
+  font-family: 'Lexend Mega', sans-serif;
+  margin: 0;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Contenedor Principal */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1600px;
+  padding: 40px;
+  gap: 20px;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Botón de Retroceso */
+.back-button {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.back-button img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Formulario y Logo */
+.form-logo-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+
+/* Tarjeta de Registro */
+.register-card {
+  background-color: rgba(206, 206, 206, 0.15);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 45%;
+  text-align: center;
+}
+
+/* Inputs */
+.register-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.register-input .mat-form-field-wrapper {
+  padding: 0 !important;
+}
+
+.register-input .mat-form-field-flex {
+  background-color: rgba(206, 206, 206, 0.3);
+  border-radius: 20px;
+  padding: 15px !important;
+}
+
+.register-input .mat-input-element {
+  color: #000;
+  font-family: 'Lexend Mega', sans-serif;
+  padding: 0 !important;
+}
+
+/* Quitar asteriscos */
+.mat-form-field-required-marker {
+  display: none !important;
+}
+
+/* Botones de Redes Sociales */
+.social-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-icon {
+  width: 60px;
+  cursor: pointer;
+}
+
+/* Botón de Registro */
+.register-button {
+  background-color: #891010 !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  padding: 10px 30px !important;
+  cursor: pointer;
+  font-family: 'Lexend Mega', sans-serif !important;
+  margin: 20px 0;
+}
+
+/* Logo */
+.logo-container {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.logo {
+  width: 600px;
+  max-width: 100%;
+}

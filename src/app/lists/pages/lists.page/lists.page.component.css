@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400&display=swap');
+
+* {
+  font-family: 'Lexend Mega', sans-serif;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #0c0c0c 0%, #1c0000 100%);
+  min-height: 100vh;
+}
+
+.lists-page-container {
+  max-width: 600px;
+  margin: 100px auto 40px;
+  padding: 16px;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.lists-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-left: 4px solid #b30000;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.list-card:hover {
+  background-color: #2a2a2a;
+}
+
+.list-header h2 {
+  font-size: 1.1rem;
+  color: white;
+  margin: 0 0 6px 0;
+}
+
+.description {
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.list-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.view-text {
+  color: #b30000;
+  font-weight: bold;
+}
+
+/* Botón de crear lista */
+.create-btn {
+  margin-top: 40px;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  background-color: #b30000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-btn:hover {
+  background-color: #990000;
+}
+
+/* Modal overlay */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #1f1f1f;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal close button */
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #b30000;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+
+.lists-page-container {
+  min-height: calc(100vh - 100px); /* asegura altura visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 60px; /* espacio para botón u otros elementos */
+}

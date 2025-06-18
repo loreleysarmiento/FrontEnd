@@ -1,0 +1,22 @@
+<div class="book-detail" *ngIf="book">
+  <div class="poster-container">
+    <img [src]="book.imagen" alt="{{book.titulo}}" class="book-poster" />
+  </div>
+
+  <div class="info-container">
+    <h2>{{book.titulo}}</h2>
+    <p>{{book.sinopsis}}</p>
+
+    <div class="book-info">
+
+      <span><strong>Género:</strong> {{book.genero.join(', ')}}</span>
+      <span><strong>Fecha de Publicación:</strong> {{book.fecha_publicacion}}</span>
+      <span><strong>Idioma Original:</strong> {{book.idioma_original}}</span>
+      <span><strong>País de Origen:</strong> {{book.pais_origen}}</span>
+      <span><strong>Editorial:</strong> {{book.editorial}}</span>
+
+      <h3>Autor</h3>
+      <app-author-card *ngIf="author" [id]="author.id" [nombre]="author.nombre" [imagen]="author.imagen"></app-author-card>
+    </div>
+  </div>
+</div>

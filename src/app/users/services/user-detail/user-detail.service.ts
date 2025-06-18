@@ -1,0 +1,27 @@
+import { Injectable } from '@angular/core';
+import {BaseService} from '../../../shared/services/base.service';
+import { environment } from '../../../../environments/environment';
+import { UserDetail } from '../../model/user-detail/user-detail.entity';
+import {catchError, Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+
+const userDetailEndpoint = environment.userDetailEndpointPath;
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserDetailService extends BaseService<UserDetail> {
+  constructor() {
+    super();
+    this.resourceEndpoint = userDetailEndpoint;
+  }
+  // user-detail.service.ts
+  getByUserId(userId: string): Observable<UserDetail> {
+    return this.http.get<UserDetail[]>(`${this.resourcePath()}?userId=${userId}`, this.httpOptions)
+      .pipe(
+        map(details => details[0]), // primero que coincida
+        catchError(this.handleError)
+      );
+  }
+
+}

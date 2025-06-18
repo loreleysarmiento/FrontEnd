@@ -1,0 +1,103 @@
+h2 {
+  padding-top: 100px;
+}
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Lexend Mega', sans-serif;
+  border-bottom: 4px solid #a4161a;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.platform-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Card estilo oscuro/vidrio */
+.platform-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.05); /* Leve transparencia */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.platform-name {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Lexend Mega', sans-serif;
+}
+
+/* Botón Agregar / Eliminar */
+.toggle-btn {
+  font-family: 'Lexend Mega', sans-serif;
+  background-color: #a4161a;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #801010;
+}
+
+/* Botón Guardar Cambios */
+.save-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 12px 36px;
+  background-color: #a4161a;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #801010;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .platform-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .platform-name {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .toggle-btn {
+    align-self: center;
+    width: 100%;
+  }
+}

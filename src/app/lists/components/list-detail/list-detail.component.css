@@ -1,0 +1,56 @@
+
+.list-detail-wrapper{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #0c0c0c 0%, #1c0000 100%);
+  min-height: 100vh;
+
+  padding-top: 100px; /* ⬅️ para evitar que la toolbar tape el título */
+  text-align: center;
+  color: white;
+
+}
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 80px;
+  font-family: 'Lexend Mega', sans-serif;
+}
+
+.list-description {
+  text-align: center;
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 140px;
+  left: 40px;
+  background-color: #b30000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.back-btn:hover {
+  background-color: #a00000;
+}

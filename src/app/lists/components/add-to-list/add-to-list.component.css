@@ -1,0 +1,120 @@
+/* ===================== */
+/* Botón "Añadir a Lista" */
+/* ===================== */
+.add-to-list-btn {
+  background-color: #b30000;
+  color: white;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.add-to-list-btn:hover {
+  background-color: #8c0000;
+}
+
+.add-to-list-btn i {
+  font-size: 16px;
+  color: white;
+}
+
+
+/* ================= */
+/* Fondo del modal */
+/* ================= */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* ================== */
+/* Contenedor del modal */
+/* ================== */
+.modal-content {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+  width: 360px;
+  font-family: 'Lexend Mega', sans-serif;
+}
+
+/* Título del modal */
+.modal-content h3 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Select de listas */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background-color: #2a2a2a;
+  color: white;
+  margin-bottom: 24px;
+  font-family: inherit;
+  appearance: none;
+}
+
+/* Botones del modal */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 10px 0;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* Botón confirmar */
+.modal-buttons .confirm {
+  background-color: #b30000;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.modal-buttons .confirm:hover {
+  background-color: #990000;
+}
+
+/* Botón cancelar */
+.modal-buttons .cancel {
+  background-color: #2e2e2e;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.modal-buttons .cancel:hover {
+  background-color: #444;
+}

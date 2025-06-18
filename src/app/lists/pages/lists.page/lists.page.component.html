@@ -1,0 +1,25 @@
+<div class="lists-page-container">
+  <div class="header">
+    <h1>Mis listas</h1>
+  </div>
+
+  <div class="lists-column">
+    <app-list-card
+      *ngFor="let list of userLists"
+      [listEntity]="list">
+    </app-list-card>
+  </div>
+
+  <!-- Botón para mostrar el modal -->
+  <button class="create-btn" (click)="creating = true">
+    + Crear nueva lista
+  </button>
+
+  <!-- Modal flotante -->
+  <div class="modal-backdrop" *ngIf="creating">
+    <div class="modal-content">
+      <button class="close-modal" (click)="creating = false">✖</button>
+      <app-create-list (listCreated)="onListCreated()"></app-create-list>
+    </div>
+  </div>
+</div>

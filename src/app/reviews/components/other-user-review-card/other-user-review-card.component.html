@@ -1,0 +1,22 @@
+<div class="review-card">
+  <div class="review-header">
+    <img [src]="userImage" alt="{{ userImage }}" class="user-avatar" />
+    <div class="user-info">
+      <span class="user-name">{{ userName }}</span>
+      <span class="time-ago">{{ timeAgo }}</span>
+    </div>
+  </div>
+
+  <div class="review-rating">
+    <ng-container *ngFor="let star of [].constructor(5); let i = index">
+      <img
+        [src]="i < review.rating ? 'assets/star.png' : 'assets/starnorellena.png'"
+        alt="Star"
+        class="star-icon"
+      />
+    </ng-container>
+  </div>
+
+
+  <p class="review-text">"{{ review.text }}"</p>
+</div>

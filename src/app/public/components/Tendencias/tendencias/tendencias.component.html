@@ -1,0 +1,51 @@
+<div class="trending-container">
+  <h1 class="main-title">TENDENCIAS</h1>
+
+  <!-- PELÍCULAS -->
+  <div class="trending-row">
+    <div class="category-label">TOP PELÍCULAS</div>
+    <div class="trending-items-horizontal">
+      <ng-container *ngFor="let movie of movies | slice:0:3">
+        <div class="trending-horizontal-card">
+          <img [src]="movie.imagen" alt="{{ movie.titulo }}" class="horizontal-image">
+          <div class="horizontal-text">
+            <div class="horizontal-title">{{ movie.titulo }}</div>
+            <div class="horizontal-genre">{{ movie.genero }}</div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- SERIES -->
+  <div class="trending-row">
+    <div class="category-label">TOP SERIES</div>
+    <div class="trending-items-horizontal">
+      <ng-container *ngFor="let serie of series | slice:0:3">
+        <div class="trending-horizontal-card">
+          <img [src]="serie.imagen" alt="{{ serie.titulo }}" class="horizontal-image">
+          <div class="horizontal-text">
+            <div class="horizontal-title">{{ serie.titulo }}</div>
+            <div class="horizontal-genre">{{ serie.genero }}</div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- LIBROS -->
+  <div class="trending-row">
+    <div class="category-label">TOP LIBROS</div>
+    <div class="trending-items-horizontal">
+      <ng-container *ngFor="let book of books | slice:0:3">
+        <div class="trending-horizontal-card">
+          <img [src]="book.imagen" alt="{{ book.titulo }}" class="horizontal-image">
+          <div class="horizontal-text">
+            <div class="horizontal-title">{{ book.titulo }}</div>
+            <div class="horizontal-genre">{{ book.genero }}</div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

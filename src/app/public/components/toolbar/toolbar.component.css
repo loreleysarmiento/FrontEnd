@@ -1,0 +1,104 @@
+/* Barra de Navegación Principal */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400&display=swap');
+
+.main-toolbar {
+  background-color: #992020;
+  color: #000000;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lexend Mega', sans-serif;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+/* Logo */
+.logo-container {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  overflow: hidden;
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+}
+
+/* Navegación */
+.toolbar-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.toolbar-nav button {
+  color: #000000;
+  font-size: 1.2rem;
+  margin: 0 20px;
+  font-family: 'Lexend Mega', sans-serif;
+  background-color: transparent;
+}
+
+.toolbar-nav button:hover {
+  background-color: transparent;
+  color: #ffcccb;
+}
+
+/* Sección Derecha (Iconos y Perfil) */
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+/* Perfil */
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* Menú del Perfil */
+.mat-menu-panel {
+  background-color: #992020;
+  border-radius: 10px;
+}
+
+.mat-menu-item {
+  color: #000000;
+  font-family: 'Lexend Mega', sans-serif;
+  padding: 10px 20px;
+}
+
+.mat-menu-item:hover {
+  background-color: #891010;
+  color: #ffffff;
+}
+/* Sección Derecha (Iconos y Perfil) */
+.icon-group {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  object-fit: contain;
+  filter: invert(1);
+  transition: filter 0.3s;
+}
+
+.icon:hover {
+  filter: invert(0.8); /* Efecto de hover */
+}

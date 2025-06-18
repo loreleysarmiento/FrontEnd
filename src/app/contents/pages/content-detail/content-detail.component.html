@@ -1,0 +1,32 @@
+<div *ngIf="content" class="content-detail-wrapper">
+  <div class="main-and-reviews">
+    <!-- Contenido principal -->
+    <div class="main-content">
+      <app-movie-detail *ngIf="type === 'movie'" [movie]="content"></app-movie-detail>
+      <app-serie-detail *ngIf="type === 'serie'" [serie]="content"></app-serie-detail>
+      <app-book-detail *ngIf="type === 'book'" [book]="content"></app-book-detail>
+
+
+      <app-add-to-list [contentId]="content?.id"></app-add-to-list>
+
+    </div>
+
+    <!-- Sección lateral de reseñas -->
+    <div class="side-content">
+      <div class="reviews-section" *ngIf="reviews.length > 0">
+        <h3>Rajes</h3>
+        <app-other-user-review-card
+          *ngFor="let review of reviews"
+          [review]="review">
+        </app-other-user-review-card>
+      </div>
+
+      <div class="create-review">
+        <app-create-review
+          [contenidoId]="content.id"
+          (reviewCreated)="loadReviews()">
+        </app-create-review>
+      </div>
+    </div>
+  </div>
+</div>

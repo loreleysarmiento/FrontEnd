@@ -1,0 +1,34 @@
+<div class="author-profile-wrapper">
+  <div class="author-profile-container">
+    <!-- Columna izquierda -->
+    <div class="author-left">
+      <img [src]="author?.imagen" alt="Imagen de {{author?.nombre}}" class="author-image" />
+      <button class="back-btn" routerLink="/foryou">Volver a Para Ti</button>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="author-info">
+      <h1>{{ author?.nombre }}</h1>
+      <h2>Edad: {{ author?.edad }}</h2>
+      <p>{{ author?.descripcion }}</p>
+
+      <!-- Libros del autor -->
+      <div class="credits-inline" *ngIf="libros.length > 0">
+        <h3>Libros</h3>
+        <div class="credits-row">
+          <a
+            *ngFor="let book of libros"
+            [routerLink]="['/content', 'book', book.id]"
+            style="text-decoration: none;"
+          >
+            <app-book-card
+              [titulo]="book.titulo"
+              [imagen]="book.imagen"
+              [book]="book"
+            ></app-book-card>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

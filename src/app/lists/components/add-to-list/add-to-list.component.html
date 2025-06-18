@@ -1,0 +1,22 @@
+<!-- Botón para abrir el modal -->
+<button class="add-to-list-btn" (click)="toggleDropdown()">
+  <i class="fa-solid fa-plus"></i> Añadir a Lista
+</button>
+
+<!-- Modal -->
+<div class="modal-backdrop" *ngIf="showDropdown">
+  <div class="modal-content">
+    <h3>Selecciona una lista</h3>
+
+    <select [(ngModel)]="selectedListId">
+      <option *ngFor="let list of lists" [value]="list.id">
+        {{ list.name }}
+      </option>
+    </select>
+
+    <div class="modal-buttons">
+      <button class="confirm-btn" (click)="addToList()">Confirmar</button>
+      <button class="cancel-btn" (click)="toggleDropdown()">Cancelar</button>
+    </div>
+  </div>
+</div>
