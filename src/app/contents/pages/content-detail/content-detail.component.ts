@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { MovieService } from '../../movies/services/movie.service.service';
 import { SerieService } from '../../series/services/serie.service.service';
 import { BookService } from '../../books/services/book.service.service';
@@ -41,7 +41,8 @@ export class ContentDetailComponent implements OnInit {
     private movieService: MovieService,
     private serieService: SerieService,
     private bookService: BookService,
-    private reviewService: ReviewService
+    private reviewService: ReviewService,
+    private router : Router
   ) {}
 
   ngOnInit(): void {
@@ -79,5 +80,7 @@ export class ContentDetailComponent implements OnInit {
     console.log(`Contenido añadido a la lista con ID: ${listId}`);
     // Aquí puedes usar ListService para actualizar la lista si lo deseas
   }
-
+  goBack(): void {
+    this.router.navigate(['/tendencies']);
+  }
 }

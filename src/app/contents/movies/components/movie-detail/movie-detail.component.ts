@@ -7,7 +7,7 @@ import { DirectorService } from '../../../../persons/directors/services/director
 import { ActorService } from '../../../../persons/actors/services/actor.service.service';
 import { PlatformService } from '../../../platforms/services/platform.service.service';
 import { MovieService } from '../../services/movie.service.service';
-import { RouterModule, ActivatedRoute } from '@angular/router';
+import {RouterModule, ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-movie-detail',
@@ -33,7 +33,8 @@ export class MovieDetailComponent implements OnInit {
     private movieService: MovieService,
     private directorService: DirectorService,
     private actorService: ActorService,
-    private platformService: PlatformService
+    private platformService: PlatformService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -80,4 +81,5 @@ export class MovieDetailComponent implements OnInit {
       });
     }
   }
+
 }

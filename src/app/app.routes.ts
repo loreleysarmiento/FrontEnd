@@ -14,6 +14,7 @@ import {EditProfileComponent}  from './users/components/edit-profile/edit-profil
 import {ContentDetailComponent} from './contents/pages/content-detail/content-detail.component';
 import {ListsPageComponent} from './lists/pages/lists.page/lists.page.component';
 import {ListDetailComponent} from './lists/components/list-detail/list-detail.component';
+import {TopCategoryComponent} from './public/components/top-category/top-category.component';
 
 
 export const routes: Routes = [
@@ -31,8 +32,7 @@ export const routes: Routes = [
   { path: 'foryou', component: ParatiComponent },
   { path: 'favorites', component: TendenciasComponent },
   { path: 'content/:type/:id', component: ContentDetailComponent },
-
-
+  { path: 'top/:type', component: TopCategoryComponent },
   // 🎬 Detalle de contenido
   { path: 'movies/:id', component: MovieDetailComponent },
 
