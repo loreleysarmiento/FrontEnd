@@ -1,0 +1,32 @@
+<div class="modal-overlay">
+  <div class="modal-container">
+    <h2>Editar Reseña</h2>
+
+    <form (ngSubmit)="submitUpdate()" #reviewForm="ngForm">
+      <div class="star-rating">
+        <img
+          *ngFor="let star of stars; let i = index"
+          [src]="i < updatedReview.rating ? 'assets/star.png' : 'assets/starnorellena.png'"
+          class="star-icon"
+          (click)="selectStar(i + 1)"
+          alt="Estrella"
+        />
+      </div>
+
+
+
+      <textarea
+        [(ngModel)]="updatedReview.text"
+        name="text"
+        rows="4"
+        required
+        placeholder="Edita tu comentario..."
+      ></textarea>
+
+      <div class="modal-actions">
+        <button type="submit" [disabled]="!reviewForm.form.valid">Guardar</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -29,35 +29,13 @@ export class ReviewService extends BaseService<Review> {
   }
 
   getAllReviews(): Observable<Review[]> {
-    return this.getAll(); // heredado de BaseService
+    return this.getAll();
   }
 
-  getMovieById(id: string): Observable<Movie> {
-    return this.http.get<Movie[]>(`${this.moviesUrl}?id=${id}`).pipe(
-      map(movies => movies[0] || {})
-    );
-  }
+
   getReviewsByContenidoId(contenidoId: string): Observable<Review[]> {
     return this.http.get<Review[]>(`${this.resourcePath()}?contenidoId=${contenidoId}`);
   }
 
-  getEnrichedReviews(userId: string): Observable<any[]> {
-    return this.getReviewsByUserId(userId).pipe(
-      switchMap(reviews => {
-        const contentRequests = reviews.map(review =>
-          this.getMovieById(review.contenidoId)
-        );
 
-        return forkJoin(contentRequests).pipe(
-          map(movies => {
-            return reviews.map((review, index) => ({
-              ...review,
-              contenidoTitulo: movies[index]?.titulo,
-              contenidoImagen: movies[index]?.imagen
-            }));
-          })
-        );
-      })
-    );
-  }
 }
