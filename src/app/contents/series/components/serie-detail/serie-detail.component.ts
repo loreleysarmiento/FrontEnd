@@ -9,6 +9,7 @@ import {NgForOf, NgIf} from '@angular/common';
 import {DirectorCardComponent} from '../../../../persons/directors/components/director-card/director-card.component';
 import {ReviewService} from '../../../../reviews/services/review.service';
 import {SerieService} from '../../services/serie.service.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -35,7 +36,8 @@ export class SerieDetailComponent implements OnInit {
     private actorService: ActorService,
     private platformService: PlatformService,
     private reviewService: ReviewService,
-    private serieService: SerieService
+    private serieService: SerieService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -98,4 +100,5 @@ export class SerieDetailComponent implements OnInit {
       }
     });
   }
+
 }

@@ -2059,7 +2059,7 @@
       "plataformas_id": [
         "PL003"
       ],
-      "calificacion": 4.8,
+      "calificacion": 1,
       "sinopsis": "Ambientada en el universo de Star Wars, esta serie sigue a un cazarrecompensas mandaloriano solitario conocido como Din Djarin. Mientras viaja por los rincones más oscuros de la galaxia, se convierte en el protector de un misterioso niño sensible a la Fuerza, conocido como 'Grogu', enfrentándose a imperiales remanentes, cazarrecompensas rivales y enemigos poderosos.",
       "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/NS3TDDEPQJAK7PSGWANCM7FPVE.jpeg"
     },
@@ -2115,6 +2115,7 @@
       "id": "SR013",
       "titulo": "Attack on Titan",
       "director_id": "DI027",
+      "actores_id": [],
       "genero": [
         "Animación",
         "Acción",
@@ -2129,7 +2130,7 @@
       "plataformas_id": [
         "PL007"
       ],
-      "calificacion": 4.8,
+      "calificacion": 3,
       "sinopsis": "En un mundo donde la humanidad vive dentro de enormes murallas para protegerse de gigantescos seres conocidos como Titanes, Eren Yeager jura exterminar a estas criaturas después de que un Titán Colosal destruya su hogar. Con la ayuda de sus amigos Mikasa y Armin, se une al Cuerpo de Exploración para enfrentar los horrores de este mundo brutal y descubrir la verdad detrás de los Titanes.",
       "imagen": "https://files.ekmcdn.com/allwallpapers/images/attack-on-titan-eren-yeager-poster-61x91.5cm-large-new-manga-anime-38928-1-p.jpg"
     },
@@ -2823,15 +2824,8 @@
       "rating": 2,
       "text": "no me gusta",
       "createdAt": "2025-06-18T02:38:56.560Z"
-    },
-    {
-      "id": "RV035",
-      "userId": "US003",
-      "contenidoId": "SR005",
-      "rating": 5,
-      "text": "Una serie para hacer maraton",
-      "createdAt": "2025-06-19T06:55:06.079Z"
     }
+    
   ],
   "userDetails": [
     {

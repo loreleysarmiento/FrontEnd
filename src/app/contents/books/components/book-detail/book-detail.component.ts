@@ -5,6 +5,7 @@ import {Book} from '../../model/book.entity';
 import {AuthorService} from '../../../../persons/authors/services/author.service.service';
 import {ReviewService} from '../../../../reviews/services/review.service';
 import {BookService} from '../../services/book.service.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-book-detail',
@@ -18,7 +19,7 @@ export class BookDetailComponent implements OnInit {
   author: any = null;
 
   constructor(private authorService: AuthorService, private bookService: BookService,
-              private reviewService: ReviewService) {}
+              private reviewService: ReviewService, private router: Router) {}
 
   ngOnInit(): void {
     if (this.book) {
@@ -52,4 +53,5 @@ export class BookDetailComponent implements OnInit {
       this.author = author;
     });
   }
+
 }
