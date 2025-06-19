@@ -1,0 +1,40 @@
+<div class="top-category-wrapper">
+  <div class="top-header">
+    <button class="back-button" (click)="goBack()">
+      <img src="assets/ArrowBack.png" alt="Volver">
+    </button>
+    <h1 class="top-title">TOP {{ type | uppercase }}</h1>
+  </div>
+
+  <div class="top-grid">
+    <!-- Películas -->
+    <ng-container *ngIf="type === 'movie'">
+      <app-movie-card
+        *ngFor="let item of items"
+        [titulo]="item.titulo"
+        [imagen]="item.imagen"
+        [movie]="item">
+      </app-movie-card>
+    </ng-container>
+
+    <!-- Series -->
+    <ng-container *ngIf="type === 'serie'">
+      <app-serie-card
+        *ngFor="let item of items"
+        [titulo]="item.titulo"
+        [imagen]="item.imagen"
+        [serie]="item">
+      </app-serie-card>
+    </ng-container>
+
+    <!-- Libros -->
+    <ng-container *ngIf="type === 'book'">
+      <app-book-card
+        *ngFor="let item of items"
+        [titulo]="item.titulo"
+        [imagen]="item.imagen"
+        [book]="item">
+      </app-book-card>
+    </ng-container>
+  </div>
+</div>
