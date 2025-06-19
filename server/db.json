@@ -1932,7 +1932,7 @@
         "PL001",
         "PL002"
       ],
-      "calificacion": 4.5,
+      "calificacion": 5,
       "sinopsis": "En el pequeño pueblo de Hawkins, Indiana, un niño desaparece misteriosamente, desencadenando una serie de eventos sobrenaturales que revelan una dimensión paralela conocida como el 'Upside Down'. Mientras sus amigos buscan respuestas, descubren a Eleven, una niña con habilidades psíquicas que puede ser la clave para entender los oscuros secretos que acechan a su ciudad.",
       "imagen": "https://m.media-amazon.com/images/M/MV5BMjg2NmM0MTEtYWY2Yy00NmFlLTllNTMtMjVkZjEwMGVlNzdjXkEyXkFqcGc@.V1.jpg"
     },
@@ -2578,14 +2578,6 @@
       "createdAt": "2025-05-15T14:34:00Z"
     },
     {
-      "id": "RV002",
-      "userId": "US003",
-      "contenidoId": "MV002",
-      "rating": 3,
-      "text": "Es buena, pero no la volvería a ver.",
-      "createdAt": "2025-05-14T11:20:00Z"
-    },
-    {
       "id": "RV003",
       "userId": "US002",
       "contenidoId": "MV008",
@@ -2624,14 +2616,6 @@
       "rating": 4,
       "text": "Me encantó la trama y los personajes, muy recomendable.",
       "createdAt": "2025-05-09T21:15:00Z"
-    },
-    {
-      "id": "RV008",
-      "userId": "US003",
-      "contenidoId": "MV003",
-      "rating": 3,
-      "text": "Un poco lenta al inicio, pero luego mejora bastante.",
-      "createdAt": "2025-05-08T19:50:00Z"
     },
     {
       "id": "RV009",
@@ -2840,23 +2824,8 @@
       "rating": 2,
       "text": "no me gusta",
       "createdAt": "2025-06-18T02:38:56.560Z"
-    },
-    {
-      "id": "RV035",
-      "userId": "US003",
-      "contenidoId": "SR013",
-      "rating": 3,
-      "text": "mataron a todos mis personajes favoritos",
-      "createdAt": "2025-06-19T20:51:32.841Z"
-    },
-    {
-      "id": "RV036",
-      "userId": "US003",
-      "contenidoId": "SR010",
-      "rating": 1,
-      "text": "Zzzzzz",
-      "createdAt": "2025-06-19T20:51:51.042Z"
     }
+    
   ],
   "userDetails": [
     {

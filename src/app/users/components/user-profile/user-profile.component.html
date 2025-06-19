@@ -56,9 +56,20 @@
       <div class="reviews-container">
         <app-user-review-card
           *ngFor="let review of userReviews"
-          [review]="review">
+          [review]="review"
+          (reviewDelete)="removeReview($event)"
+          (editRequested)="onEditReview($event)"
+        >
         </app-user-review-card>
       </div>
+      <app-update-review
+        *ngIf="selectedReviewToEdit"
+        [review]="selectedReviewToEdit"
+        (close)="selectedReviewToEdit = null"
+        (updated)="loadUserReviews(userData!.id)">
+      </app-update-review>
+
+
     </div>
 
 

@@ -11,7 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIcon } from '@angular/material/icon';
 import { UserReviewCardComponent } from '../../../reviews/components/user-review-card/user-review-card.component';
-import {Router, RouterLink} from '@angular/router'; // Router imported
+import {Router, RouterLink} from '@angular/router';
+import {UpdateReviewComponent} from '../../../reviews/components/update-review/update-review.component'; // Router imported
 
 
 @Component({
@@ -28,13 +29,15 @@ import {Router, RouterLink} from '@angular/router'; // Router imported
     NgIf,
     NgFor,
     UserReviewCardComponent,
-    RouterLink
+    RouterLink,
+    UpdateReviewComponent
   ]
 })
 export class UserProfileComponent implements OnInit {
   protected userData: User | null = null;
   protected loading: boolean = true;
   protected userReviews: Review[] = [];
+  selectedReviewToEdit: Review | null = null;
 
   constructor(private userService: UserService, private reviewService: ReviewService, private authService: AuthService) {}
 
@@ -51,8 +54,11 @@ export class UserProfileComponent implements OnInit {
       this.loading = false;
     }
   }
+  onEditReview(review: Review) {
+    this.selectedReviewToEdit = review;
+  }
 
-  private loadUserReviews(userId: string) {
+  protected loadUserReviews(userId: string) {
     this.reviewService.getReviewsByUserId(userId).subscribe({
       next: (reviews) => {
         this.userReviews = reviews;
@@ -64,6 +70,9 @@ export class UserProfileComponent implements OnInit {
         this.loading = false;
       }
     });
+  }
+  removeReview(id: string): void {
+    this.userReviews = this.userReviews.filter(review => review.id !== id);
   }
 
   logout() {
