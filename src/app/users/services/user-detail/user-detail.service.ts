@@ -23,5 +23,8 @@ export class UserDetailService extends BaseService<UserDetail> {
         catchError(this.handleError)
       );
   }
-
+  updateUserDetails(userDetail: UserDetail): Observable<UserDetail> {
+    // Se asume que el backend espera la URL con el id del libro
+    return this.http.put<UserDetail>(`${this.resourcePath()}/${userDetail.id}`, userDetail);
+  }
 }

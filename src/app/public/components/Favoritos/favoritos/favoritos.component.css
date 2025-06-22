@@ -1,0 +1,72 @@
+.favoritos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #0d0d0d, #1a0e0e);
+  color: #fff;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.main-title {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  color: #fff;
+  border-bottom: 4px solid #a4161a;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.favoritos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.favorito-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  background-color: #141414;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.favorito-card:hover {
+  transform: translateY(-5px);
+}
+
+.eliminar-btn {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.eliminar-btn:hover {
+  color: #ff4d4d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .favoritos-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favorito-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
