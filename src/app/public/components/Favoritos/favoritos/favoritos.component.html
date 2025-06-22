@@ -1,1 +1,13 @@
-<p>favoritos works!</p>
+<div class="favoritos-container" *ngIf="favoritos && favoritos.length > 0;">
+  <h2 class="main-title">MIS FAVORITOS</h2>
+  <div class="favoritos-list">
+    <div class="favorito-item" *ngFor="let item of favoritos">
+      <div class="favorito-card">
+        <app-movie-card *ngIf="item.id && item.id.startsWith('MV')" [titulo]="item.titulo" [imagen]="item.imagen" [movie]="item"></app-movie-card>
+        <app-book-card *ngIf="item.id && item.id.startsWith('BK')" [titulo]="item.titulo" [imagen]="item.imagen" [book]="item"></app-book-card>
+        <app-serie-card *ngIf="item.id && item.id.startsWith('SR')" [titulo]="item.titulo" [imagen]="item.imagen" [serie]="item"></app-serie-card>
+        <button class="eliminar-btn" (click)="eliminarFavorito(item.id)">−</button>
+      </div>
+    </div>
+  </div>
+</div>
