@@ -30,7 +30,7 @@ export const routes: Routes = [
   // 📚 Contenidos
   { path: 'tendencies', component: TendenciasComponent },
   { path: 'foryou', component: ParatiComponent },
-  { path: 'favorites', component: TendenciasComponent },
+  { path: 'favorites', component: FavoritosComponent },
   { path: 'content/:type/:id', component: ContentDetailComponent },
   { path: 'top/:type', component: TopCategoryComponent },
   // 🎬 Detalle de contenido
