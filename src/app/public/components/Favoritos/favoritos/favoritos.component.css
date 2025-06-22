@@ -70,3 +70,29 @@
     max-width: 280px;
   }
 }
+/* Estilo para cuando no hay favoritos */
+.favoritos-container + div {
+  background-color: #1a0e0e;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lexend Mega', sans-serif;
+}
+
+.favoritos-container + div h2 {
+  font-size: 2rem;
+  color: #a4161a;
+  margin-bottom: 20px;
+}
+
+.favoritos-container + div p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ddd;
+}
