@@ -21,11 +21,21 @@
           <mat-error *ngIf="usernameInput.invalid && usernameInput.touched">Usuario es obligatorio</mat-error>
         </mat-form-field>
 
-        <mat-form-field appearance="fill" class="register-input">
+        <mat-form-field class="register-input" appearance="fill">
           <mat-label>Correo electrónico</mat-label>
-          <input matInput [(ngModel)]="email" name="email" required email #emailInput="ngModel">
-          <mat-error *ngIf="emailInput.invalid && emailInput.touched">Correo válido es obligatorio</mat-error>
+          <input matInput [(ngModel)]="email" name="email" required email
+                 #emailInput="ngModel" (ngModelChange)="emailExists = false">
+
+          <mat-error *ngIf="emailInput.invalid && emailInput.touched && !emailExists">
+            Correo válido es obligatorio
+          </mat-error>
+
+          <span *ngIf="emailExists">
+  Correo existente, utilizar otro correo
+</span>
+
         </mat-form-field>
+
 
         <mat-form-field appearance="fill" class="register-input">
           <mat-label>Contraseña</mat-label>

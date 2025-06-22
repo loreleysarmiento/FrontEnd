@@ -19,6 +19,13 @@ export class UserService extends BaseService<User>{
   registerUser(user: User): Observable<User> {
     return this.create(user);
   }
+
+  getByEmail(email: string): Observable<User | undefined> {
+    return this.getAll().pipe(
+      map(users => users.find(user => user.email === email))
+    );
+  }
+
   getUserById(userId: string): Observable<User> {
     const url = `${environment.serverBaseUrl}${environment.userEndpointPath}?id=${userId}`;
     console.log("User URL:", url);

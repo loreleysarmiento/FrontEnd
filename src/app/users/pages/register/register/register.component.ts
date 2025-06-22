@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -20,6 +20,9 @@ import { MatInputModule } from '@angular/material/input';
   imports: [CommonModule, FormsModule, MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule]
 })
 export class RegisterComponent {
+
+
+
   protected name: string = '';
   protected username: string = '';
   protected email: string = '';
@@ -27,10 +30,13 @@ export class RegisterComponent {
   protected confirmPassword: string = '';
   protected errorMessage: string = '';
 
+  emailExists: boolean = false;
+
   constructor(
     private userService: UserService,
     private userDetailService: UserDetailService,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ) {}
 
   register() {
@@ -48,6 +54,14 @@ export class RegisterComponent {
         const userIds = users.map(user => user.id.replace("US", "")).map(Number);
         const nextId = Math.max(...userIds) + 1;
         const newUserId = `US${String(nextId).padStart(3, '0')}`;
+        const exists = users.some(user => user.email === this.email);
+        if (exists) {
+          console.log('Correo ya existe');
+          this.emailExists = true;
+          this.cdr.detectChanges(); // ← Forzar detección de cambios
+          return;
+        }
+        this.emailExists = false;
 
         const newUser: User = {
           id: newUserId,
