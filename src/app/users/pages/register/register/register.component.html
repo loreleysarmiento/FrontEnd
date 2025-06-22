@@ -8,30 +8,36 @@
   <div class="form-logo-container">
     <!-- Formulario de Registro -->
     <mat-card class="register-card">
-      <form (ngSubmit)="register()" class="register-form">
+      <form #registerForm="ngForm" (ngSubmit)="register()" class="register-form">
         <mat-form-field appearance="fill" class="register-input">
           <mat-label>Nombre</mat-label>
-          <input matInput [(ngModel)]="name" name="name" required>
+          <input matInput [(ngModel)]="name" name="name" required #nameInput="ngModel">
+          <mat-error *ngIf="nameInput.invalid && nameInput.touched">Nombre es obligatorio</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill" class="register-input">
           <mat-label>Usuario</mat-label>
-          <input matInput [(ngModel)]="username" name="username" required>
+          <input matInput [(ngModel)]="username" name="username" required #usernameInput="ngModel">
+          <mat-error *ngIf="usernameInput.invalid && usernameInput.touched">Usuario es obligatorio</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill" class="register-input">
           <mat-label>Correo electrónico</mat-label>
-          <input matInput [(ngModel)]="email" name="email" required>
+          <input matInput [(ngModel)]="email" name="email" required email #emailInput="ngModel">
+          <mat-error *ngIf="emailInput.invalid && emailInput.touched">Correo válido es obligatorio</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill" class="register-input">
           <mat-label>Contraseña</mat-label>
-          <input matInput [(ngModel)]="password" name="password" type="password" required>
+          <input matInput [(ngModel)]="password" name="password" type="password" required #passwordInput="ngModel">
+          <mat-error *ngIf="passwordInput.invalid && passwordInput.touched">Contraseña es obligatoria</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill" class="register-input">
           <mat-label>Confirmar contraseña</mat-label>
-          <input matInput [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required>
+          <input matInput [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required #confirmPasswordInput="ngModel">
+          <mat-error *ngIf="confirmPasswordInput.invalid && confirmPasswordInput.touched">Confirmar contraseña es obligatorio</mat-error>
+          <mat-error *ngIf="password !== confirmPassword && confirmPasswordInput.touched">Las contraseñas no coinciden</mat-error>
         </mat-form-field>
 
         <div class="social-buttons">
@@ -39,8 +45,12 @@
           <img src="assets/gmailicon.png" alt="Google" class="social-icon">
         </div>
 
-        <button mat-raised-button color="warn" class="register-button">Registrarse</button>
+        <button mat-raised-button color="warn" class="register-button"
+                [disabled]="!registerForm.valid || password !== confirmPassword">
+          Registrarse
+        </button>
       </form>
+
     </mat-card>
 
     <!-- Logo RAJE -->

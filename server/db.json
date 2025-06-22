@@ -2566,6 +2566,94 @@
       "platforms": [],
       "list": [],
       "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
+    },
+    {
+      "id": "US015",
+      "firstName": "",
+      "lastName": "",
+      "userName": "",
+      "email": "",
+      "password": "",
+      "platforms": [],
+      "list": [],
+      "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
+    },
+    {
+      "id": "US016",
+      "firstName": "asdas",
+      "lastName": "",
+      "userName": "asdasd",
+      "email": "adasd",
+      "password": "asdasd",
+      "platforms": [],
+      "list": [],
+      "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
+    },
+    {
+      "id": "US017",
+      "firstName": "asfsd",
+      "lastName": "",
+      "userName": "asfsad",
+      "email": "sfsaf",
+      "password": "",
+      "platforms": [],
+      "list": [],
+      "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
+    },
+    {
+      "id": "US018",
+      "firstName": "asdas",
+      "lastName": "",
+      "userName": "",
+      "email": "",
+      "password": "",
+      "platforms": [],
+      "list": [],
+      "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
+    },
+    {
+      "id": "US019",
+      "firstName": "",
+      "lastName": "",
+      "userName": "",
+      "email": "",
+      "password": "",
+      "platforms": [],
+      "list": [],
+      "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
+    },
+    {
+      "id": "US020",
+      "firstName": "asdsad",
+      "lastName": "",
+      "userName": "asdsad",
+      "email": "rayomil845@gmail.com",
+      "password": "asdasd",
+      "platforms": [],
+      "list": [],
+      "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
+    },
+    {
+      "id": "US021",
+      "firstName": "Alvarobro",
+      "lastName": "",
+      "userName": "Albro",
+      "email": "albrobejaruta@gmail.com",
+      "password": "ola",
+      "platforms": [],
+      "list": [],
+      "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
+    },
+    {
+      "id": "US022",
+      "firstName": "Alvaro",
+      "lastName": "",
+      "userName": "Albro",
+      "email": "albrobejaruta@gmail.com",
+      "password": "alvaro",
+      "platforms": [],
+      "list": [],
+      "images": "https://i.pinimg.com/236x/09/02/86/090286be7ffa5bc199ad0bb34af40d68.jpg"
     }
   ],
   "reviews": [
@@ -2917,6 +3005,66 @@
     {
       "id": "UD014",
       "userId": "US014",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD015",
+      "userId": "US015",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD016",
+      "userId": "US015",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD017",
+      "userId": "US015",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD018",
+      "userId": "US016",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD019",
+      "userId": "US017",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD020",
+      "userId": "US018",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD021",
+      "userId": "US019",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD022",
+      "userId": "US020",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD023",
+      "userId": "US021",
+      "favorites": [],
+      "viewed": []
+    },
+    {
+      "id": "UD024",
+      "userId": "US022",
       "favorites": [],
       "viewed": []
     }
