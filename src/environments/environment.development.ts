@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
   // Server Base URL for Rest API
-  serverBaseUrl: 'http://localhost:3000',
+  serverBaseUrl: 'https://api-test-raje.onrender.com',
   userEndpointPath: '/users',
   platformEndpointPath: '/platforms',
   directorEndpointPath: '/directors',
